@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles/design-system.css">
+
+  <style>
+    /* Apply full-height layout */
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      background: url('assets/404-background.jpg') no-repeat center center/cover;
+      color: var(--accent-color);
+    }
+
+    /* Main container for 404 message */
+    .container {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better text visibility */
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: var(--secondary-color);
+      text-shadow: 0px 0px 20px var(--secondary-color);
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: var(--text-color);
+      margin-bottom: 30px;
+    }
+
+    /* Button to return to homepage */
+    .home-button {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 5px;
+      box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--secondary-color);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .home-button:hover {
+      background-color: var(--secondary-color);
+      box-shadow: 0 0 20px var(--secondary-color), 0 0 30px var(--primary-color);
+    }
+
+    @media only screen and (max-width: 600px) {
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .home-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>404</h1>
+    <p>Oops! The page you were looking for doesn’t exist.</p>
+    <a href="index.html" class="home-button">Return to Home</a>
+  </div>
+</body>
+
+</html>

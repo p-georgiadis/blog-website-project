@@ -1,0 +1,255 @@
+/* Color Palette */
+:root {
+    --primary-color: #0ff0fc; /* Neon Cyan */
+    --secondary-color: #ff007a; /* Neon Pink */
+    --accent-color: #fbeb00; /* Neon Yellow */
+    --background-color: #0d0d0d; /* Dark Black Background */
+    --text-color: #ffffff; /* White Text */
+    --card-background: #1e1e1e; /* Dark Gray for Cards */
+}
+
+/* ------------------------
+   Body and General Styles
+   ------------------------ */
+body {
+    font-family: 'Roboto Mono', monospace; /* Futuristic Monospace Font */
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Headers */
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif; /* Futuristic Typeface */
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--primary-color);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Paragraph Text */
+p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+p.bold {
+    font-weight: bold;
+}
+
+p.italic {
+    font-style: italic;
+}
+
+p.underline {
+    text-decoration: underline;
+}
+
+/* Links */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    position: relative;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Neon Line Effect for Links */
+a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Quotes */
+blockquote {
+    font-style: italic;
+    border-left: 5px solid var(--accent-color);
+    padding-left: 1.5rem;
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+/* ------------------------
+   Buttons
+   ------------------------ */
+button {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    padding: 12px 24px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
+    box-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--primary-color);
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--accent-color);
+}
+
+/* Secondary Button */
+button.secondary {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--primary-color);
+}
+
+button.secondary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--accent-color);
+}
+
+/* ------------------------
+   Cards
+   ------------------------ */
+.card {
+    background-color: var(--card-background);
+    border: 1px solid var(--accent-color);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 0.75rem;
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--accent-color);
+}
+
+.card-content {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+/* ------------------------
+   Forms
+   ------------------------ */
+input[type="text"], input[type="email"] {
+    padding: 12px;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    background-color: var(--card-background);
+    color: var(--text-color);
+    width: 100%;
+    margin-bottom: 12px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+input[type="submit"], button {
+    padding: 12px 24px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
+    box-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--primary-color);
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-color);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--accent-color);
+}
+
+/* ------------------------
+   Layout and Spacing
+   ------------------------ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.footer {
+    padding: 20px;
+    background-color: var(--card-background);
+    color: var(--text-color);
+    text-align: center;
+    border-top: 2px solid var(--accent-color);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+/* ------------------------
+   Responsive Design
+   ------------------------ */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    button, input[type="submit"] {
+        width: 100%;
+        padding: 15px;
+    }
+}
