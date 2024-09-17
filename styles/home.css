@@ -6,6 +6,51 @@
   min-height: 100vh;
 }
 
+/* Phone screens */
+@media (max-width: 600px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .sidebar {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .post-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 768px) {
+    .grid-layout {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .post-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
 /* Sidebar Styles */
 .sidebar {
   background-color: var(--background-color);
