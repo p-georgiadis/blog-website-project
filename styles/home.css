@@ -4,51 +4,10 @@
   grid-template-columns: 250px 1fr;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
-}
-
-/* Phone screens */
-@media (max-width: 600px) {
-    .grid-layout {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr auto;
-    }
-
-    .sidebar {
-        text-align: center;
-        padding: 10px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .cta-button {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
-
-    .post-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Medium screens */
-@media (max-width: 768px) {
-    .grid-layout {
-        grid-template-columns: 200px 1fr;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .post-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+  grid-template-areas:
+    "sidebar header"
+    "sidebar content"
+    "sidebar footer";
 }
 
 /* Sidebar Styles */
@@ -56,6 +15,12 @@
   background-color: var(--background-color);
   color: var(--text-color);
   padding: 20px;
+  text-align: center;
+  grid-area: sidebar;
+}
+
+.sidebar .logo {
+  grid-area: logo;
   text-align: center;
 }
 
@@ -95,6 +60,7 @@
   align-items: center;
   text-align: center;
   color: var(--accent-color);
+  grid-area: header;
 }
 
 .hero h1 {
@@ -130,6 +96,7 @@
   background-color: var(--background-color);
   padding: 40px;
   text-align: center;
+  grid-area: content;
 }
 
 .blog-preview h2 {
@@ -150,6 +117,7 @@
   color: white;
   padding: 40px 20px;
   text-align: center;
+  grid-area: footer;
 }
 
 .subscribe-form {
@@ -162,7 +130,6 @@
 
 /* Footer */
 footer {
-  grid-column: 1 / span 2;
   background-color: var(--primary-color);
   color: var(--accent-color);
   padding: 20px;
@@ -178,4 +145,62 @@ footer {
 
 .social-links a:hover {
   color: var(--secondary-color);
+}
+
+/* Mobile Layout for small screens */
+@media (max-width: 600px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "logo"
+      "header"
+      "sidebar"
+      "content"
+      "footer";
+  }
+
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet/Mid-Sized screens */
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "logo"
+      "header"
+      "sidebar"
+      "content"
+      "footer";
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .post-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }

@@ -1,11 +1,13 @@
 /* Color Palette */
 :root {
-    --primary-color: #0ff0fc; /* Neon Cyan */
-    --secondary-color: #ff007a; /* Neon Pink */
-    --accent-color: #fbeb00; /* Neon Yellow */
+    --primary-color: #00d1e1; /* Brighter Neon Cyan for better contrast */
+    --secondary-color: #b30047; /* Darker Neon Pink for better contrast */
+    --accent-color: #ffc700; /* Darkened Neon Yellow for better contrast */
     --background-color: #0d0d0d; /* Dark Black Background */
     --text-color: #ffffff; /* White Text */
     --card-background: #1e1e1e; /* Dark Gray for Cards */
+    --link-hover-color: #00b8cc; /* Darkened Cyan for links */
+    --button-hover-bg: #009db3; /* Darker Cyan hover color for buttons */
 }
 
 /* ------------------------
@@ -38,6 +40,7 @@ h1 {
 h2 {
     font-size: 2.5rem;
     margin-bottom: 0.75rem;
+    color: var(--secondary-color); /* Better contrast for headers */
 }
 
 h3 {
@@ -53,18 +56,6 @@ p {
     text-shadow: 0 0 10px var(--accent-color);
 }
 
-p.bold {
-    font-weight: bold;
-}
-
-p.italic {
-    font-style: italic;
-}
-
-p.underline {
-    text-decoration: underline;
-}
-
 /* Links */
 a {
     color: var(--secondary-color);
@@ -73,8 +64,8 @@ a {
 }
 
 a:hover {
-    color: var(--primary-color);
-    text-shadow: 0 0 10px var(--primary-color);
+    color: var(--link-hover-color);
+    text-shadow: 0 0 10px var(--link-hover-color);
 }
 
 /* Neon Line Effect for Links */
@@ -123,7 +114,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--primary-color);
+    background-color: var(--button-hover-bg);
     border-color: var(--secondary-color);
     box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--accent-color);
 }
@@ -205,7 +196,7 @@ input[type="submit"], button {
 }
 
 input[type="submit"]:hover {
-    background-color: var(--primary-color);
+    background-color: var(--button-hover-bg);
     border-color: var(--secondary-color);
     box-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--accent-color);
 }
