@@ -1,102 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyberpunk Blog</title>
   <!-- Main CSS -->
   <link rel="stylesheet" href="styles/main.css">
-  <!-- Design System -->
-  <link rel="stylesheet" href="styles/design-system.css">
-  <!-- Page Specific CSS -->
-  <link rel="stylesheet" href="styles/home.css">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <!-- FontAwesome for social icons -->
   <script src="https://kit.fontawesome.com/7e609a5f6f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-  <!-- Grid Layout -->
-  <div class="grid-layout">
+<!-- Grid Layout -->
+<div class="grid-layout">
 
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-      <div class="logo">
-        <img src="assets/logo.png" alt="Cyberpunk Blog Logo">
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Cyberpunk Blog Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#">Search</a></li>
+      <li><a href="#">Subscribe</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to the Neon Streets of Cyberpunk</h1>
+        <p><em>Immerse</em> yourself in the <u>futuristic</u> world of technology, chaos, and style.</p>
+        <button class="cta-button">Explore the Blog</button>
       </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#">Search</a></li>
-        <li><a href="#">Subscribe</a></li>
-      </ul>
-    </aside>
+    </section>
 
-    <!-- Main Content Area -->
-    <main class="main-content">
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero-content">
-          <h1>Welcome to the Neon Streets of Cyberpunk</h1>
-          <p>Immerse yourself in the futuristic world of technology, chaos, and style.</p>
-          <button class="cta-button">Explore the Blog</button>
-        </div>
-      </section>
-
-      <!-- Blog Post Previews -->
-      <section class="blog-preview">
-        <h2>Latest Blog Posts</h2>
-        <div class="post-grid">
-          <!-- Blog Post Card 1 -->
-          <div class="card">
+    <!-- Blog Post Previews -->
+    <section class="blog-preview">
+      <h2>Latest Blog Posts</h2>
+      <div class="post-grid">
+        <!-- Blog Post Card 1 -->
+        <div class="card">
+          <figure>
             <img src="assets/blog-image1.jpg" alt="Cybernetic Enhancements">
-            <div class="card-content">
-              <h3 class="card-title">The Rise of Cybernetic Enhancements</h3>
-              <p class="card-description">Discover how humans are enhancing their bodies with cutting-edge technology...</p>
-              <a href="blog/post.html" class="read-more">Read More</a>
-            </div>
-          </div>
-          <!-- Blog Post Card 2 -->
-          <div class="card">
-            <img src="assets/blog-image2.jpg" alt="Cyberpunk Technology">
-            <div class="card-content">
-              <h3 class="card-title">Neon Dreams: The Nightlife in 2077</h3>
-              <p class="card-description">Explore the vibrant and dangerous nightlife in the megacities of the future...</p>
-              <a href="404.html" class="read-more">Read More</a>
-            </div>
-          </div>
-          <!-- Blog Post Card 3 -->
-          <div class="card">
-            <img src="assets/blog-image3.jpg" alt="Virtual Reality">
-            <div class="card-content">
-              <h3 class="card-title">Virtual Reality or is Reality Virtual</h3>
-              <p class="card-description">Proof we are living in the matrix and this is all a simulation...</p>
-              <a href="404.html" class="read-more">Read More</a>
-            </div>
+            <figcaption><a href="assets/blog-image1.jpg" target="_blank">Cybernetic Enhancements</a></figcaption>
+          </figure>
+          <div class="card-content">
+            <h3 class="card-title">The Rise of Cybernetic Enhancements</h3>
+            <p class="card-description"><em>Discover</em> how humans are <u>enhancing</u> their bodies with cutting-edge technology...</p>
+            <a href="blog/post.html" class="read-more">Read More</a>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- Footer with Subscribe Section -->
-    <footer>
-      <section class="subscribe">
-        <h2>Subscribe to the Cyberpunk Blog</h2>
-        <p>Stay updated with the latest posts and insights.</p>
-        <form class="subscribe-form">
-          <input type="text" placeholder="Your Name">
-          <input type="email" placeholder="Your Email">
-          <input type="submit" value="Subscribe">
-        </form>
-      </section>
-      <div class="social-links">
-        <a href="https://github.com/p-georgiadis" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-        <a href="https://linkedin.com/in/p-georgiadis" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <!-- Blog Post Card 2 -->
+        <div class="card">
+          <figure>
+            <img src="assets/blog-image2.jpg" alt="Cyberpunk Technology">
+            <figcaption><a href="assets/blog-image2.jpg" target="_blank">Cyberpunk Technology</a></figcaption>
+          </figure>
+          <div class="card-content">
+            <h3 class="card-title">Neon Dreams: The Nightlife in 2077</h3>
+            <p class="card-description"><em>Explore</em> the <u>vibrant</u> and dangerous nightlife in the megacities of the future...</p>
+            <a href="404.html" class="read-more">Read More</a>
+          </div>
+        </div>
+        <!-- Blog Post Card 3 -->
+        <div class="card">
+          <figure>
+            <img src="assets/blog-image3.jpg" alt="Virtual Reality">
+            <figcaption><a href="assets/blog-image3.jpg" target="_blank">Virtual Reality</a></figcaption>
+          </figure>
+          <div class="card-content">
+            <h3 class="card-title">Virtual Reality or is Reality Virtual</h3>
+            <p class="card-description"><em>Proof</em> we are living in the matrix and this is all a <u>simulation</u>...</p>
+            <a href="404.html" class="read-more">Read More</a>
+          </div>
+        </div>
       </div>
-      <p>&copy; 2024 Cyberpunk Blog. All Rights Reserved.</p>
-    </footer>
+    </section>
+  </main>
 
-  </div>
+  <!-- Footer with Subscribe Section -->
+  <footer>
+    <section class="subscribe">
+      <h2>Subscribe to the Cyberpunk Blog</h2>
+      <p>Stay updated with the <u>latest</u> posts and <em>insights</em>.</p>
+      <form class="subscribe-form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <input type="submit" value="Subscribe">
+      </form>
+    </section>
+    <div class="social-links">
+      <a href="https://github.com/p-georgiadis" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/p-georgiadis" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    </div>
+    <p>&copy; 2024 Cyberpunk Blog. All Rights Reserved.</p>
+  </footer>
+
+</div>
 </body>
+
 </html>
